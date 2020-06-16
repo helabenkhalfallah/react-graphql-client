@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import {
-  UserQueries,
+  UserMutations,
 }from '../graphql';
 
 const {
   ADD_USER,
-} = UserQueries;
+} = UserMutations;
 
 const UserAddView = () => {
   const [addUser, {loading} ] = useMutation(ADD_USER, { errorPolicy: 'all' });

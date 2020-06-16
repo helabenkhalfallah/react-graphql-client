@@ -20,7 +20,7 @@ function App() {
         <UsersListView />
         <h2>Get user by Id</h2>
         <UserDetailsView 
-          email="stevejobs@gmail.com"
+          email="helaben@gmail.com"
         />
         <h2>Add new user</h2>
         <UserAddView />
