@@ -1,5 +1,47 @@
 import { gql } from 'apollo-boost';
 
+/*
+const USER_PROFILE = gql`
+    fragment UserProfile on UserType {
+      id
+      firstName
+      lastName
+      birthday
+      email
+      phone
+      username
+    }
+  `;
+
+const GET_USERS = gql`
+  {
+    users {
+      ...UserProfile
+      posts {
+        createdAt
+        text
+        user
+      }
+    }
+  }
+  ${USER_PROFILE}
+`;
+
+const GET_USER = gql`
+  query User($email: String!) {
+    user(email: $email) {
+      ...UserProfile
+      posts {
+        createdAt
+        text
+        user
+      }
+    }
+  }
+  ${USER_PROFILE}
+`;
+*/
+
 const GET_USERS = gql`
   {
     users {
