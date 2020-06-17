@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
+import { Descriptions } from 'antd';
 import {
   UserQueries,
 }from '../graphql';
@@ -17,7 +18,7 @@ const UserDetailsView = ({
     data,
   } = useQuery(GET_USER, {
     variables: { email },
-    pollInterval: 5000,
+    // pollInterval: 5000,
   });
 
   if (loading) return <p>Loading...</p>;
@@ -27,17 +28,17 @@ const UserDetailsView = ({
   const {
     firstName,
     lastName,
-    birthday,
-    phone,
     username,
-    posts,
   } = data.user;
 
   return (
   <div>
-    <p>
-      {firstName}: {lastName}
-    </p>
+    <Descriptions title="User Details">
+      <Descriptions.Item label="username">{username}</Descriptions.Item>
+      <Descriptions.Item label="First Name">{firstName}</Descriptions.Item>
+      <Descriptions.Item label="Last Name">{lastName}</Descriptions.Item>
+      <Descriptions.Item label="Birthday">22/02/1299</Descriptions.Item>
+    </Descriptions>
   </div>);
 };
 

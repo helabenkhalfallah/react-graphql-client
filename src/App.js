@@ -1,6 +1,9 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { 
+  Divider,
+} from 'antd';
 import {
   UsersListView,
   UserDetailsView,
@@ -16,13 +19,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div>
-        <h2>Users List</h2>
+        <Divider plain>User List</Divider>
         <UsersListView />
-        <h2>Get user by Id</h2>
+        <Divider plain>User Details</Divider>
         <UserDetailsView 
-          email="helaben@gmail.com"
+          email="alberteinsten@gmail.com"
         />
-        <h2>Add new user</h2>
+        <Divider plain>Add new user</Divider>
         <UserAddView />
       </div>
     </ApolloProvider>
